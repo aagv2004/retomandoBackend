@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div>Listado de empleados</div>
+    {% if empleados %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Fono</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for emp in empleados %}
+                <tr>
+                    <td scope="row">{{emp.id}}</td>
+                    <td>{{ emp.nombre }}</td>
+                    <td>{{ emp.email }}</td>
+                    <td>{{ emp.fono }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-info">No hay empleados</div>
+    {% endif %}
+</body>
+</html>
