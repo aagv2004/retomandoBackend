@@ -21,5 +21,6 @@ from holaMundoApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.employeeData)
+    path('', views.employeeData),
+    path('formulario/', views.userRegistrationView)
 ]

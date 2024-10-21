@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="alert alert-info display-1 text-center">USER REGISTRATION</div>
+
+    <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-info" value="ENVIAR">
+    </form>
+</body>
+</html>
